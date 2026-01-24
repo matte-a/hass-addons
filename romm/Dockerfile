@@ -1,12 +1,11 @@
-# Use the official ROMM image
 FROM ghcr.io/rommapp/romm:latest
 
-# Remove the default entrypoint to avoid /init crash
+# Remove the default ROMM ENTRYPOINT to avoid /init crash
 ENTRYPOINT []
 
-# Copy our HA wrapper script
+# Copy our wrapper script into the image
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
 
-# Default command: run our wrapper
+# Set our wrapper script as the command
 CMD ["/run.sh"]
