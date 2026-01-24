@@ -1,6 +1,6 @@
 name: ROMM
-slug: romm
-version: "1.0.2"
+slug: romm_dev
+version: "1.0.3"
 description: Retro ROM Manager
 arch:
   - amd64
@@ -10,13 +10,10 @@ boot: auto
 init: false
 
 environment:
-  ROMM_AUTH_SECRET_KEY: "replace_with_long_random_string"
+  ROMM_AUTH_SECRET_KEY: "replace_with_a_long_random_secret"
   ROMM_DATA_DIR: /config
   ROMM_ROMS_DIR: /share/roms
-
-  # Database (SQLite – REQUIRED for HA)
-  ROMM_DATABASE_ENGINE: sqlite
-  ROMM_DATABASE_PATH: /config/romm.db
+  DATABASE_URL: "sqlite:////config/romm.db"
 
 ports:
   8080/tcp: 8080
