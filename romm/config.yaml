@@ -1,0 +1,26 @@
+name: ROMM
+slug: romm
+version: "1.0.0"
+description: Retro ROM Manager
+url: https://github.com/YOUR_GITHUB/ha-addon-romm
+arch:
+  - amd64
+
+startup: services
+boot: auto
+init: false
+
+ports:
+  8080/tcp: 8080
+
+ports_description:
+  8080/tcp: ROMM Web UI
+
+map:
+  - share:rw
+  - config:rw
+
+options: {}
+schema: {}
+
+webui: http://[HOST]:[PORT:8080]
