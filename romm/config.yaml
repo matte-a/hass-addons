@@ -1,7 +1,7 @@
 name: ROMM
-slug: romm_dev
-version: "1.0.6"
-description: Retro ROM Manager
+slug: romm
+version: "1.0.0"
+description: Retro ROM Manager for HA
 arch:
   - amd64
 
@@ -9,10 +9,9 @@ startup: services
 boot: auto
 init: false
 
-command: ["/run.sh"]
-
+# HA add-on options
 options:
-  romm_auth_secret_key: "replace_with_long_random_secret"
+  romm_auth_secret_key: "supersecretkey123"
   database_url: "sqlite:////config/romm.db"
 
 schema:
@@ -25,5 +24,7 @@ map:
 
 ports:
   8080/tcp: 8080
+
+command: ["/run.sh"]
 
 webui: http://[HOST]:[PORT:8080]
