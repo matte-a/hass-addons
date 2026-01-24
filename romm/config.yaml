@@ -1,6 +1,7 @@
 name: ROMM
 slug: romm
 version: "1.0.1"
+description: Retro ROM Manager
 arch:
   - amd64
 
@@ -9,7 +10,7 @@ boot: auto
 init: false
 
 environment:
-  ROMM_AUTH_SECRET_KEY: "super_long_random_secret"
+  ROMM_AUTH_SECRET_KEY: "replace_with_a_long_random_string"
   ROMM_DATA_DIR: /config
   ROMM_ROMS_DIR: /share/roms
 
