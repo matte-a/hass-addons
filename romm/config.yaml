@@ -1,6 +1,6 @@
 name: ROMM
 slug: romm
-version: "1.0.1"
+version: "1.0.2"
 description: Retro ROM Manager for HA
 arch:
   - amd64
@@ -24,7 +24,5 @@ map:
 
 ports:
   8080/tcp: 8080
-
-command: ["/run.sh"]
 
 webui: http://[HOST]:[PORT:8080]
