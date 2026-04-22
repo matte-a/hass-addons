@@ -1,6 +1,6 @@
 name: ROMM
 slug: romm
-version: "1.0.16"
+version: "1.0.17"
 description: Retro ROM Manager
 arch:
   - amd64

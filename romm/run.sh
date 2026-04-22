@@ -7,10 +7,9 @@ export DB_HOST="core-mariadb"
 export DB_PORT="3306"
 export DB_NAME="romm"
 export DB_USER="romm"
-export ROMM_DATA_DIR="/config/romm"
-export ROMM_LIBRARY_DIR="/share/roms"
+export ROMM_BASE_PATH="/share/romm"
 
-mkdir -p /romm/config /romm/resources /romm/assets /redis-data /config/romm /share/roms
-touch /romm/config/config.yml
+mkdir -p /share/romm/library /share/romm/resources /share/romm/assets /share/romm/config /redis-data /config/romm
+touch /share/romm/config/config.yml
 
 exec /docker-entrypoint.sh /init
