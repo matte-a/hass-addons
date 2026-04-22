@@ -10,5 +10,6 @@ export ROMM_DATA_DIR="/config/romm"
 export ROMM_LIBRARY_DIR="/share/roms"
 
 mkdir -p /romm/config /romm/resources /romm/assets /redis-data /config/romm /share/roms
+touch /config/romm/romm.db
 
 exec /docker-entrypoint.sh /init
