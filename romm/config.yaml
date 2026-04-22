@@ -1,6 +1,6 @@
 name: ROMM
 slug: romm
-version: "1.0.8"
+version: "1.0.9"
 description: Retro ROM Manager
 arch:
   - amd64
@@ -9,9 +9,6 @@ startup: services
 boot: auto
 init: false
 
-options:
-  romm_auth_secret_key: "supersecretkey123"
-  database_url: "sqlite:////config/romm.db"
 
 schema:
   romm_auth_secret_key: str
