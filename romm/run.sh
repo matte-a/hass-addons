@@ -6,4 +6,4 @@ export DATABASE_URL=$(grep -o '"database_url":"[^"]*"' /data/options.json | cut 
 export ROMM_DATA_DIR="/config"
 export ROMM_ROMS_DIR="/share/roms"
 
-exec /entrypoint.sh
+exec python3 /app/main.py
