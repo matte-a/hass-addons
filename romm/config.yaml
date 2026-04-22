@@ -1,7 +1,7 @@
 name: ROMM
 slug: romm
-version: "1.0.2"
-description: Retro ROM Manager for HA
+version: "1.0.5"
+description: Retro ROM Manager
 arch:
   - amd64
 
@@ -9,7 +9,6 @@ startup: services
 boot: auto
 init: false
 
-# HA add-on options
 options:
   romm_auth_secret_key: "supersecretkey123"
   database_url: "sqlite:////config/romm.db"
