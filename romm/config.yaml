@@ -1,6 +1,6 @@
 name: ROMM
 slug: romm
-version: "1.0.14"
+version: "1.0.16"
 description: Retro ROM Manager
 arch:
   - amd64
@@ -11,7 +11,13 @@ map:
   - share:rw
   - config:rw
 ports:
-  8080/tcp: 8080
+  8080/tcp: 8181
 webui: http://[HOST]:[PORT:8080]
 services:
   - mysql:need
+options:
+  romm_auth_secret_key: "changeme"
+  db_passwd: "rommpassword"
+schema:
+  romm_auth_secret_key: str
+  db_passwd: str
