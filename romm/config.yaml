@@ -1,19 +1,17 @@
 name: ROMM
 slug: romm
-version: "1.0.12"
+version: "1.0.14"
 description: Retro ROM Manager
 arch:
   - amd64
-
 startup: services
 boot: auto
 init: false
-
 map:
   - share:rw
   - config:rw
-
 ports:
   8080/tcp: 8080
-
 webui: http://[HOST]:[PORT:8080]
+services:
+  - mysql:need
