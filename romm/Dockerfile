@@ -1,6 +1,6 @@
 FROM ghcr.io/rommapp/romm:latest
 
-RUN apt-get update && apt-get install -y jq && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache jq
 
 ENTRYPOINT []
 COPY run.sh /run.sh
